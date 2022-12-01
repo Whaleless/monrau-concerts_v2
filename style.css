@@ -19,7 +19,7 @@ ul {
     font-family: "ProximaNova", sans-serif;
 
     text-transform: uppercase;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 10px black;
 }
 
 body {
@@ -93,23 +93,28 @@ header {
 }
 
 .purchase_button {
-    position: relative;
-        top: -75px;
-        left: 350px;
+    /*position: relative;*/
+    /*    top: -75px;*/
+    /*    left: 350px;*/
+    margin-top: 5px;
 
     height: 4rem;
     width: 12rem;
+
     background: #ef164f;
+    box-shadow: 0px 4px 30px rgb(207 78 78 / 70%);
+    font-family: "ProximaNova", sans-serif;
+    font-size: 2.2em;
+    text-transform: uppercase;
+
+
+
     border-radius: 7px;
     border: none;
     outline: none;
-    box-shadow: 0px 4px 30px rgb(207 78 78 / 70%);
     transition: box-shadow .1s ease-in;
     cursor: pointer;
     color: white;
-    text-transform: uppercase;
-    font-size: 2.2em;
-    font-family: "ProximaNova", sans-serif;
 
 
 }
@@ -120,19 +125,26 @@ header {
 
 .concerts {
     position: absolute;
-        top: 35%;
+        top: 36%;
         left: 40%;
 
-    min-width: 550px;
+    width: 33%;
+    min-width: 450px;
     z-index: 1;
+}
+
+.concert {
+    display: flex;
+        justify-content: space-between;
+
+    margin-bottom: 50px;
 }
 
 .soap {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    backdrop-filter: blur(5px);
+    transition: backdrop-filter .5s ease-in;
 }
 
 
@@ -158,8 +170,15 @@ header {
 
 @media (max-width: 1020px) {
     .soap {
-        z-index: 0;
+        backdrop-filter: blur(5px);
     }
+
+    .header,
+    .social-block,
+    .concerts {
+        z-index: 1;
+    }
+
 
     body {
         display: flex;
@@ -169,8 +188,31 @@ header {
 
     .concerts {
         position: static;
-        margin-top: 180px;
-        margin-right: 40px;
+        margin-top: 155px;
+        margin-right: 16%;
     }
     
+}
+
+@media (max-width: 680px) {
+    .logo,
+    .concerts {
+        transform: scale(.75);
+    }
+
+    body {
+            justify-content: center;
+    }
+
+    .concerts {
+        margin: 0;
+    }
+
+    .social-block {
+        bottom: 25px;
+        top: unset;
+        width: 100%;
+        display: flex;
+            flex-direction: row;
+    }
 }
