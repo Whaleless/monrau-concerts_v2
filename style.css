@@ -4,6 +4,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 
     background-color: black;
 }
@@ -69,9 +70,8 @@ header {
     transform: scale(1.2);
 }
 
-.hidden_link {
+.logo {
     margin-top: 20px;
-    cursor: default;
 }
 
 .page_title {
@@ -81,8 +81,6 @@ header {
 }
 
 .city_name {
-    margin-bottom: -0px;
-
     font-size: 2.2em;
     color: #ff0043;
 }
@@ -93,9 +91,6 @@ header {
 }
 
 .purchase_button {
-    /*position: relative;*/
-    /*    top: -75px;*/
-    /*    left: 350px;*/
     margin-top: 5px;
 
     height: 4rem;
@@ -106,8 +101,6 @@ header {
     transition: box-shadow .1s ease-in;
     cursor: pointer;
     color: white;
-
-
 }
 
 .purchase_button:hover {
@@ -174,16 +167,23 @@ header {
 }
 
 @media (max-width: 680px) {
-    .logo,
-    .concerts {
-        transform: scale(.75);
+
+    .logo {
+        transform: scale(.6);
     }
 
     body {
-            justify-content: center;
+        display: block;
+        overflow: hidden;
+
+        background-image: url("/assets/back_mobile.png");
+        background-size: cover;
+        background-position-y: bottom;
     }
 
     .concerts {
+        position: absolute;
+            bottom: 0;
         margin: 0;
     }
 
@@ -193,5 +193,60 @@ header {
         width: 100%;
         display: flex;
             flex-direction: row;
+    }
+
+    .concerts {
+            top: unset;
+            left: unset;
+        min-width: unset;
+
+        display: flex;
+            flex-direction: column;
+
+        width: 100%;
+    }
+
+    .concert {
+            justify-content: space-around;
+        margin-bottom: 30px;
+    }
+
+    .concert:last-child {
+        margin-bottom: 40px;
+    }
+
+    .page_title {
+        margin-right: 20px;
+    }
+
+    .page_title {
+            align-self: flex-end;
+        font-size: 2em;
+
+        margin-bottom: calc(15% - 10px);
+    }
+
+    .city_name {
+        font-size: 1.2em;
+        text-shadow: none;
+    }
+
+    .date_time, .place_name {
+        font-size: 0.8em;
+        color: black;
+        text-shadow: none;
+    }
+
+    .purchase_button {
+        margin-top: 5px;
+
+        height: 2rem;
+        width: 8rem;
+        font-size: .8em !important;
+        line-height: 20px !important;
+    }
+
+    .soap {
+        display: none;
     }
 }
