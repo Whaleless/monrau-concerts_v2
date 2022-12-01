@@ -1,0 +1,176 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: black;
+}
+
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-family: "ProximaNova", sans-serif;
+
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px black;
+}
+
+body {
+    background-image: url("assets/backv2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    height: 35px;
+
+    position: absolute;
+        top: 0;
+
+    display: flex;
+        justify-content: center;
+
+    z-index: 1;
+}
+
+.social-block {
+    position: absolute;
+        top: 35px;
+        left: 25px;
+    z-index: 1;
+}
+
+.social-option {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.social-option:last-child {
+    margin-bottom: 0;
+}
+
+.social-link {
+    padding: 15px;
+}
+
+.social-img {
+    transition: transform .1s ease-in;
+}
+
+.social-link:hover > .social-img {
+    transform: scale(1.2);
+}
+
+.hidden_link {
+    margin-top: 20px;
+    cursor: default;
+}
+
+.page_title {
+    margin-bottom: 15%;
+
+    font-size: 4em;
+}
+
+.city_name {
+    margin-bottom: -0px;
+
+    font-size: 2.2em;
+    color: #ff0043;
+}
+
+.date_time, .place_name {
+    font-size: 1.2em;
+    font-family: "copperplate", sans-serif;
+}
+
+.purchase_button {
+    position: relative;
+        top: -75px;
+        left: 350px;
+
+    height: 4rem;
+    width: 12rem;
+    background: #ef164f;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 30px rgb(207 78 78 / 70%);
+    transition: box-shadow .1s ease-in;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-family: "ProximaNova", sans-serif;
+
+
+}
+
+.purchase_button:hover {
+    box-shadow: 0px 4px 30px rgb(207 78 78);
+}
+
+.concerts {
+    position: absolute;
+        top: 35%;
+        left: 40%;
+
+    min-width: 550px;
+    z-index: 1;
+}
+
+.soap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+
+
+/*Rules*/
+
+@font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/ProximaNova.ttf");
+}
+
+@font-face {
+    font-family: "copperplate";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/copperplate.otf");
+}
+
+@media (max-width: 1020px) {
+    .soap {
+        z-index: 0;
+    }
+
+    body {
+        display: flex;
+            justify-content: flex-end;
+            align-items: center;
+    }
+
+    .concerts {
+        position: static;
+        margin-top: 180px;
+        margin-right: 40px;
+    }
+    
+}
