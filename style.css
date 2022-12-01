@@ -101,15 +101,6 @@ header {
     height: 4rem;
     width: 12rem;
 
-    background: #ef164f;
-    box-shadow: 0px 4px 30px rgb(207 78 78 / 70%);
-    font-family: "ProximaNova", sans-serif;
-    font-size: 2.2em;
-    text-transform: uppercase;
-
-
-
-    border-radius: 7px;
     border: none;
     outline: none;
     transition: box-shadow .1s ease-in;
@@ -120,7 +111,8 @@ header {
 }
 
 .purchase_button:hover {
-    box-shadow: 0px 4px 30px rgb(207 78 78);
+    box-shadow: 0px 4px 30px rgb(207 78 78) !important;
+    opacity: 1 !important;
 }
 
 .concerts {
@@ -154,19 +146,6 @@ header {
 
 /*Rules*/
 
-@font-face {
-    font-family: "ProximaNova";
-    font-style: normal;
-    font-weight: 400;
-    src: url("assets/ProximaNova.ttf");
-}
-
-@font-face {
-    font-family: "copperplate";
-    font-style: normal;
-    font-weight: 400;
-    src: url("assets/copperplate.otf");
-}
 
 @media (max-width: 1020px) {
     .soap {
