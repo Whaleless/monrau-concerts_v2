@@ -2,9 +2,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
+    letter-spacing: 2px;
 
     background-color: black;
 }
@@ -17,21 +18,23 @@ ul {
     padding: 0;
 
     color: white;
-    font-family: "ProximaNova", sans-serif;
+    font-family: "GoudyTrajan", sans-serif;
 
     text-transform: uppercase;
     text-shadow: 0px 0px 10px black;
 }
 
 body {
-    background-image: url("assets/backv2.jpg");
+    background-color: #000;
+    background-image: url("assets/backv2.png");
     background-size: cover;
+    background-position: left bottom;
     background-repeat: no-repeat;
 }
 
 header {
     width: 100%;
-    height: 35px;
+    height: 220px;
 
     position: absolute;
         top: 0;
@@ -71,58 +74,57 @@ header {
 }
 
 .logo {
-    margin-top: 20px;
+    margin-top: 64px;
 }
 
-.page_title {
-    margin-bottom: 15%;
-
-    font-size: 4em;
+.concert_info {
+    display: flex;
+    margin-bottom: 3px;
 }
 
 .city_name {
     font-size: 2.2em;
-    color: #ff0043;
 }
 
-.date_time, .place_name {
-    font-size: 1.2em;
-    font-family: "copperplate", sans-serif;
+.date_time {
+    font-size: 2.2em;
+    font-family: "GoudyTrajan", sans-serif;
+    margin-right: 15px;
+    color: #d3372b;
 }
 
 .purchase_button {
-    margin-top: 5px;
-
-    height: 4rem;
-    width: 12rem;
+    height: 2.5rem;
+    width: 9rem;
 
     border: none;
     outline: none;
-    transition: box-shadow .1s ease-in;
+    transition: box-shadow .2s ease-in;
     cursor: pointer;
     color: white;
 }
 
 .purchase_button:hover {
-    box-shadow: 0px 4px 30px rgb(207 78 78) !important;
+    box-shadow: 0px 0px 15px #d3372b !important;
     opacity: 1 !important;
 }
 
 .concerts {
     position: absolute;
         top: 36%;
-        left: 40%;
-
-    width: 33%;
+        left: 50%;
+    transform: scale(1.3);
+    width: 35%;
     min-width: 450px;
     z-index: 1;
 }
 
 .concert {
     display: flex;
-        justify-content: space-between;
+    flex-direction: column;
+    align-items: end;
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .soap {
@@ -140,7 +142,7 @@ header {
 /*Rules*/
 
 
-@media (max-width: 1020px) {
+@media (max-width: 1080px) {
     .soap {
         backdrop-filter: blur(5px);
     }
@@ -167,20 +169,24 @@ header {
 }
 
 @media (max-width: 680px) {
+    header {
+        height: 160px;
+    }
 
     .logo {
         transform: scale(.6);
+        margin: 10px;
     }
 
     body {
         display: block;
         overflow: hidden;
 
-        background: white;
-        background-image: url(/assets/paper.png), url(/assets/back_mobile.png);
-        background-size: contain, cover;
+        background: black;
+        background-image: url(/assets/zhdun_nahui_mobilka.png);
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position-y: bottom, top;
+        background-position-y: bottom;
     }
 
     .concerts {
@@ -220,45 +226,37 @@ header {
         display: flex;
             flex-direction: column;
 
-        width: 100%;
+        width: 85vw;
     }
 
     .concert {
-            justify-content: space-around;
-        margin-bottom: 30px;
+            justify-content: flex-end;
+            flex-direction: row;
+
+        margin-bottom: 15px;
     }
 
     .concert:last-child {
         margin-bottom: 80px;
     }
 
-    .page_title {
-        margin-right: 20px;
-    }
-
-    .page_title {
-            align-self: flex-end;
-        font-size: 2em;
-
-        margin-bottom: calc(15% - 10px);
-    }
-
     .city_name {
-        font-size: 1.2em;
+        font-size: 1.1em;
         text-shadow: none;
+        margin-left: 0;
     }
 
-    .date_time, .place_name {
-        font-size: 0.8em;
-        color: black;
+    .date_time {
+        font-size: 1.1em;
         text-shadow: none;
+        margin-right: 10px;
     }
 
     .purchase_button {
-        margin-top: 5px;
+        margin-left: 5px;
 
-        height: 2rem;
-        width: 8rem;
+        height: 1.5rem;
+        width: 25vw;
         font-size: .8em !important;
         line-height: 20px !important;
     }
