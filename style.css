@@ -26,7 +26,7 @@ ul {
 
 body {
     background-color: #000;
-    background-image: url("assets/backv2.png");
+    background-image: url("https://cdn.jsdelivr.net/gh/Whaleless/monrau-concerts_v2/assets/backv2.png");
     background-size: cover;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@ header {
         overflow: hidden;
 
         background: black;
-        background-image: url(/assets/zhdun_nahui_mobilka.png);
+        background-image: url("https://cdn.jsdelivr.net/gh/Whaleless/monrau-concerts_v2/assets/zhdun_nahui_mobilka.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: bottom;
