@@ -168,6 +168,14 @@ header {
     
 }
 
+@media (max-height: 775px) {
+    header {
+        position: absolute;
+        top: unset;
+        bottom: 130px;
+    }
+}
+
 @media (max-width: 680px) {
     header {
         height: 160px;
